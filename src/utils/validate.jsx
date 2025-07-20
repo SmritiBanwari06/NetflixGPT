@@ -1,4 +1,4 @@
-export const checkValidData = (email, password, name = null) => {
+export const checkValidData = (email, password) => {
   const isEmailValid = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(
     email
   );
@@ -10,12 +10,6 @@ export const checkValidData = (email, password, name = null) => {
   }
   if (!isPasswordValid) {
     return "Password must be at least 8 characters long and contain at least one uppercase letter, one lowercase letter, and one number.";
-  }
-  if (name !== null) {
-    const isNameValid = /\b([A-ZÀ-ÿ][-,a-z. ']+[ ]*)+/.test(name);
-    if (!isNameValid) {
-      return "Name is not valid";
-    }
   }
   return null;
 };
