@@ -6,15 +6,15 @@ import {
   signInWithEmailAndPassword,
   updateProfile,
 } from "firebase/auth";
+import { BG_IMG } from "../utils/constants";
 import { auth } from "../utils/firebase";
-import { useNavigate } from "react-router-dom";
+
 import { useDispatch } from "react-redux";
 import { addUser } from "../utils/userSlice";
 
 const Login = () => {
   const [isSignIn, setIsSignIn] = useState(true);
   const [errorMessage, setErrorMessae] = useState(null);
-  const navigate = useNavigate();
   const dispatch = useDispatch();
 
   const email = useRef(null);
@@ -43,7 +43,6 @@ const Login = () => {
               dispatch(
                 addUser({ uid: uid, email: email, displayName: displayName })
               );
-              useNavigate("/browse");
             })
             .catch((error) => {
               setErrorMessae(error.message);
@@ -64,7 +63,6 @@ const Login = () => {
         .then((userCredential) => {
           const user = userCredential.user;
           console.log("User signed in successfully:", user);
-          navigate("/browse");
         })
         .catch((error) => {
           const errorCode = error.code;
@@ -85,7 +83,7 @@ const Login = () => {
       {/* Background Image */}
       <div className="absolute inset-0">
         <img
-          src="https://assets.nflxext.com/ffe/siteui/vlv3/fc164b4b-f085-44ee-bb7f-ec7df8539eff/d23a1608-7d90-4da1-93d6-bae2fe60a69b/IN-en-20230814-popsignuptwoweeks-perspective_alpha_website_large.jpg"
+          src={BG_IMG}
           alt="background"
           className="w-full h-full object-cover"
         />
