@@ -47,20 +47,23 @@ export const GPTSearchBar = () => {
 
   const langKey = useSelector((store) => store.config.lang);
   return (
-    <div className="pt-[10%] flex justify-center items-center">
+    <div className="pt-[30%] md:pt-50 flex justify-center px-4">
       <form
-        className=" w-1/2 bg-black grid grid-cols-12 mt-20"
-        onSubmit={(e) => e.preventDefault()}
+        className="w-full md:w-1/2 bg-black/70 grid grid-cols-12 rounded-lg"
+        onSubmit={(e) => {
+          e.preventDefault();
+          handleGPTSearchClick();
+        }}
       >
         <input
           ref={searchText}
           type="text"
           placeholder={lang[langKey].placeholder}
-          className="p-4 m-4 text-black col-span-9 bg-white"
-        ></input>
+          className="p-4 m-2 col-span-9 bg-white rounded-lg text-black outline-none"
+        />
         <button
-          className="py-2 px-2 m-4 bg-red-700 text-white rounded-lg cursor-pointer col-span-3"
-          onClick={handleGPTSearchClick}
+          className="col-span-3 m-2 py-2 px-4 bg-red-700 text-white rounded-lg hover:bg-red-800 transition-colors"
+          type="submit"
         >
           {lang[langKey].search}
         </button>

@@ -36,3 +36,11 @@
 36. GPT Search Function
 37. GPT Search Bar
 38. Added Multi-lingual feature
+39. Get Gemini API Key
+40. GPT Search API call
+41. Fetched GPT Movie suggestion from TMDB
+42. Created GPT slice and added data
+43. Reused MovieList Component to make movie suggestion container
+44. Memoization
+45. Added .env and added it to gitignore
+46. Made our site responsive
