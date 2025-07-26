@@ -28,4 +28,10 @@
 28. Embedded the youtube video and make it autoplay and mute
 29. Tailwind classes to make main container look awesome
 30. Built Secondary Container
-31.
+31. Built Movie list
+32. Build Movie CArd
+33. TMBD Image CDN URL
+34. Made the browse page amazing with tailwind css
+35. Use Popular Movies Custom Hooks
+36. GPT Search Function
+37.
