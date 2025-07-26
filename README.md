@@ -34,4 +34,5 @@
 34. Made the browse page amazing with tailwind css
 35. Use Popular Movies Custom Hooks
 36. GPT Search Function
-37.
+37. GPT Search Bar
+38. Added Multi-lingual feature
