@@ -2,16 +2,14 @@ import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
 import { getAuth } from "firebase/auth";
 
-const api_key = import.meta.env.VITE_FIREBASE_API_KEY;
-
 const firebaseConfig = {
-  apiKey: api_key,
-  authDomain: "netflixgpt-4a888.firebaseapp.com",
-  projectId: "netflixgpt-4a888",
-  storageBucket: "netflixgpt-4a888.appspot.com",
-  messagingSenderId: "393594681186",
-  appId: "1:393594681186:web:b0071388ed691c12e81e3b",
-  measurementId: "G-QRE2MEFC89",
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
+  authDomain: import.meta.env.VITE_AUTH_DOMAIN,
+  projectId: import.meta.env.VITE_PROJECT_ID,
+  storageBucket: import.meta.env.VITE_STORAGE_BUCKET,
+  messagingSenderId: import.meta.env.VITE_SENDER_ID,
+  appId: import.meta.env.VITE_APP_ID,
+  measurementId: import.meta.env.VITE_MEASUREMENT_ID,
 };
 
 const app = initializeApp(firebaseConfig);
