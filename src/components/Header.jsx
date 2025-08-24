@@ -66,7 +66,7 @@ const Header = () => {
             </select>
           )}
           <button
-            className=" py-2 px-4 mx-4 my-2 cursor-pointer bg-purple-800 rounded-md"
+            className=" py-2 px-4 mx-4 my-2 cursor-pointer bg-red-700 rounded-md"
             onClick={handleSearch}
           >
             {showGptSearch ? "Home Page" : "GPT Search"}
